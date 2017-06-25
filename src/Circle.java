@@ -103,8 +103,10 @@ class Circle implements Runnable {
             if (panel.circles.get(i).referenceToThread != this.referenceToThread) {
 
                 double betha = alpha + 2 * (stepLength / 1000);
-                potentialX = (float) ((panel.getWidth() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.sin(betha));
-                potentialY = (float) ((panel.getHeight() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.cos(betha));
+                potentialX = (float) ((panel.getWidth() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.sin
+                        (betha));
+                potentialY = (float) ((panel.getHeight() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.cos
+                        (betha));
 
                 float xd = potentialX - panel.circles.get(i).x;
                 float yd = potentialY - panel.circles.get(i).y;
@@ -179,8 +181,10 @@ class Circle implements Runnable {
             float potentialY;
             do {
                 this.alpha = random.nextInt(350);
-                potentialX = (float) ((panel.getWidth() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.sin(alpha));
-                potentialY = (float) ((panel.getHeight() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.cos(alpha));
+                potentialX = (float) ((panel.getWidth() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.sin
+                        (alpha));
+                potentialY = (float) ((panel.getHeight() / 2 - this.diameter / 2) + ring.RING_DIAMETER / 2 * Math.cos
+                        (alpha));
             } while (IsCollision(potentialX, potentialY));
             this.x = potentialX;
             this.y = potentialY;

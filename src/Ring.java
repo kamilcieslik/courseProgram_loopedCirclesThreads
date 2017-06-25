@@ -17,6 +17,7 @@ class Ring {
                 RING_DIAMETER = panel.getWidth() - 200;
             else
                 RING_DIAMETER = panel.getHeight() - 200;
-        g.drawOval((panel.getWidth() / 2 - RING_DIAMETER / 2), (panel.getHeight() / 2 - RING_DIAMETER / 2), RING_DIAMETER, RING_DIAMETER);
+        g.drawOval((panel.getWidth() / 2 - RING_DIAMETER / 2), (panel.getHeight() / 2 - RING_DIAMETER / 2),
+                RING_DIAMETER, RING_DIAMETER);
     }
 }
